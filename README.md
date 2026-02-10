@@ -1,5 +1,4 @@
-> [!NOTE]  
-> This project is part of the [ZikoJS](https://github.com/zakarialaoui10/ziko.js) ecosystem.
+[![ziko-server banner](https://raw.githubusercontent.com/zikojs/.github/main/assets/banners/ziko-server.svg)](https://github.com/zikojs)
 
 # Ziko-server
 
