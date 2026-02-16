@@ -1,5 +1,4 @@
 import { tags } from "ziko/ui"
-import { Random } from 'ziko'
 export const head = {
     title : 'Ziko Server Home Page',
 }
@@ -9,7 +8,7 @@ const App = () =>{
     const ui = tags.p(
         span('Interactive')
             .style({color : "red"})
-            .onPtrDown(e=>e.target.style({color : Random.color()}))
+            .onPtrDown(e=>console.log(e.target))
             .useClient()
             ,
         span('Not Interactive'),

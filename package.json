@@ -1,6 +1,6 @@
 {
   "name": "ziko-server",
-  "version": "0.18.1",
+  "version": "0.19.0",
   "description": "server side rendering in zikojs with file-based-routing and client side hydration",
   "type": "module",
   "source": "src/index.js",
@@ -41,20 +41,20 @@
   },
   "homepage": "https://github.com/zakarialaoui10/ziko-server#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-terser": "^0.4.4",
-    "rollup": "^4.13.0"
+    "rollup": "^4.57.1"
   },
   "dependencies": {
     "compression": "^1.8.1",
-    "cross-env": "^7.0.3",
-    "express": "^4.21.2",
+    "cross-env": "^10.1.0",
+    "express": "^5.2.1",
     "extendom": "^0.0.0",
     "fast-glob": "^3.3.3",
     "jsdom": "^26.0.0",
-    "sirv": "^3.0.1",
-    "vite": "^6.3.5",
-    "ziko": "^0.49.0"
+    "sirv": "^3.0.2",
+    "vite": "^7.3.1",
+    "ziko": "^0.66.0"
   }
 }

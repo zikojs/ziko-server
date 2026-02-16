@@ -49,7 +49,7 @@ export async function createServer({ baseDir = process.cwd(), port = process.env
     res.json(globalThis.Ziko)
   })
 
-  app.use("*", async (req, res) => {
+  app.use(async (req, res) => {
     try {
       const url = req.originalUrl.replace(base, "");
       let template;

@@ -15,11 +15,6 @@
         "preview:static": "vite preview"
     },
     "dependencies": {
-        "vite": "^6.0.7",
         "zod": "^4.1.12"
-    },
-    "devDependencies": {
-        "cross-env": "^7.0.3",
-        "vite-plugin-ssr": "^0.4.85"
     }
 }
