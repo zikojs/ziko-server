@@ -1,7 +1,7 @@
 import {tags} from "ziko"
 
 
-async function App(a){
+async function App(){
     // console.log(a)
     // console.log({id, lang})
     const api = await fetch('https://jsonplaceholder.typicode.com/todos/1')

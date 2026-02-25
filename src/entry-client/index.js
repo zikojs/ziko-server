@@ -10,8 +10,8 @@ export function EntryClient({ base = '', pages } = {}) {
   if (import.meta.env.DEV) pages = import.meta.glob("/src/pages/**/*{.js,.mdz}");
   pages = import.meta.glob("/src/pages/**/*{.js,.mdz}");
   addEventListener("load", async () => {
-    const data = JSON.parse(document.head.querySelector('script#ziko-data').textContent)
-    globalThis.Ziko = data
+    const data = JSON.parse(document.head.querySelector('script#ziko-data')?.textContent ?? "{}")
+    globalThis.Ziko = data;
     // const res = await fetch(`${location.href}--ziko--`)
     // globalThis.Ziko = await res.json()
     const root = "./pages/";

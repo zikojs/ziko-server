@@ -12,7 +12,7 @@ const App = () =>{
             .useClient()
             ,
         span('Not Interactive'),
-        span(Ziko.a).useClient()
+        // span(Ziko.a).useClient()
     )
     return ui
 }

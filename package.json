@@ -44,7 +44,7 @@
     "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-terser": "^0.4.4",
-    "rollup": "^4.57.1"
+    "rollup": "^4.59.0"
   },
   "dependencies": {
     "compression": "^1.8.1",
@@ -55,6 +55,6 @@
     "jsdom": "^26.0.0",
     "sirv": "^3.0.2",
     "vite": "^7.3.1",
-    "ziko": "^0.66.0"
+    "ziko": "^0.68.1"
   }
 }
