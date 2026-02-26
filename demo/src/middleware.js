@@ -1,14 +1,18 @@
 export function logger(req, res, next) {
-  Object.assign(req, {
-    locals : {
-      user : 'zakaria'
-    }
-  })
-  globalThis.Ziko = {
-    locals : {
-      name : 'zakaria'
-    }
+  const {url} = req
+  // ignore dev & static requests
+  if (
+    url.startsWith('/@vite') ||
+    url.startsWith('/@fs') ||
+    url.startsWith('/.well-known') ||
+    url.endsWith('.svg') || 
+    url.endsWith('.js') ||
+    url.endsWith('.css') ||
+    url.endsWith('.ico') 
+  ) {
+    return next();
   }
-  // console.log(`${req.method} ${req.url}`);
-  next(); // pass control to the next middleware or route
+
+  console.log(`Hello from: ${url}`);
+  next();
 }

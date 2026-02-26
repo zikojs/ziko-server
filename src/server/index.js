@@ -10,6 +10,7 @@ import {
 } from '../server-only-utils/index.js'
 import { hydration_setup } from './middlewares.js'
 import { setup_ziko_folder } from "../setup/setup-ziko-folder.js";
+import { SetupMiddleware } from './setup-middleware.js'
 
 export async function createServer({ baseDir = process.cwd(), port = process.env.PORT || 5173 } = {}){
   await setup_ziko_folder(join(baseDir, './.ziko-experimental'))
@@ -21,6 +22,7 @@ export async function createServer({ baseDir = process.cwd(), port = process.env
   app.use(hydration_setup)
   const Middlewares = await importMiddlewares()
   app.use(Middlewares.logger)
+  app.use(SetupMiddleware)
 
   let vite;
   if (!isProduction) vite = await dev_server(app, base)
@@ -38,7 +40,6 @@ export async function createServer({ baseDir = process.cwd(), port = process.env
   app.use('/.client', express.static(path.join(process.cwd(), 'dist/.client')))
   // app.use(express.static('public'))
     
-  // HYDRATION ISSUE BEACUSE OF /
   if(isProduction){
       const PRERENDERED_ROUTES = await importPrerenderedRoutes()
       for(let i=0; i<PRERENDERED_ROUTES.length; i++){
@@ -79,9 +80,8 @@ export async function createServer({ baseDir = process.cwd(), port = process.env
       const html = template
         .replace(
           '<!--app-session-data-->',
-          `
-          <script type='application/json' id='ziko-data'>
-          ${JSON.stringify({ a : 1})}
+          `<script type='application/json' id='ziko-data'>
+${JSON.stringify(Ziko, null, 2)}
           </script>
           `
         )

@@ -1,2 +1,4 @@
 import { defineConfig } from 'ziko-server/config'
-export default defineConfig({})
+export default defineConfig({
+    site : 'ziko.com'
+})
