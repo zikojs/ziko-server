@@ -37,10 +37,17 @@ import {prerender} from 'ziko-server'
 prerender()
 `
 
+const GENERATE_ROUTES_SCRIPT = `
+import { generate_routes } from "ziko-server/setup";
+generate_routes()
+`
+
 export const Files_Content = {
     'index.html': HTMLINDEX,
     'server.js' : SERVER,
     'entry-server.js' : ENTRY_SERVER,
     'entry-client.js' : ENTRY_CLIENT,
-    'scripts/prerender' : PRERENDER_SCRIPT
+    'scripts/prerender.js' : PRERENDER_SCRIPT,
+    'scripts/generate-routes.js' : GENERATE_ROUTES_SCRIPT,
+    'cache/.keep' : null
 }

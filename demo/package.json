@@ -4,7 +4,7 @@
     "version": "0.0.0",
     "type": "module",
     "scripts": {
-        "generate:routes": "node .ziko/generate-routes.js",
+        "generate:routes": "node .ziko/scripts/generate-routes.js",
         "dev": "node .ziko/server.js",
         "build:client": "cross-env TARGET=client vite build --config ziko.config.js",
         "build:server": "cross-env TARGET=server vite build --config ziko.config.js",
