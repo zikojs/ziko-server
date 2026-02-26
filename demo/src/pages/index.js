@@ -6,7 +6,7 @@ export const head = {
 export const prerender = false;
 const {span} = tags
 const App = () =>{
-    Ziko.b = 'Index'
+    // Ziko.b = 'Index'
     const ui = tags.p(
         span('Interactive')
             .style({color : "red"})
@@ -14,7 +14,8 @@ const App = () =>{
             .useClient()
             ,
         span('Not Interactive '),
-        span(Ziko.b).useClient()
+        // span(Ziko.b).useClient(),
+        // span(Ziko.isProd ? 'Prod' : 'Dev')
     )
     return ui
 }

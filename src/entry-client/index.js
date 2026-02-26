@@ -12,8 +12,6 @@ export function EntryClient({ base = '', pages } = {}) {
   addEventListener("load", async () => {
     const data = JSON.parse(document.head.querySelector('script#ziko-data')?.textContent ?? "{}")
     globalThis.Ziko = data;
-    // const res = await fetch(`${location.href}--ziko--`)
-    // globalThis.Ziko = await res.json()
     const root = "./pages/";
     async function hydrate(path) {
       if (path.endsWith("/")) path = path.slice(0, -1);
